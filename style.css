@@ -1,0 +1,360 @@
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&family=Josefin+Sans:wght@400;700&family=Lato:wght@400;700&family=Open+Sans:wght@400;700;800&family=Raleway:wght@300;700;900&family=Rubik:wght@300;400;500&family=Work+Sans:wght@400;700;800&display=swap');
+
+
+
+:root{
+    --primary-color : #FF42A5;
+    --gray : #534C64;
+
+}
+
+
+
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Epilogue', sans-serif;
+    font-family: 'Josefin Sans', sans-serif;
+    font-family: 'Lato', sans-serif;
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Raleway', sans-serif;
+    font-family: 'Rubik', sans-serif;
+    font-family: 'Work Sans', sans-serif;
+}
+
+/* shared styles */
+
+.linear{
+    font-size: 48px;
+    background: linear-gradient(180deg, #F948B2 0%, #8758F1 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.grey-para{
+    color: var(--gray);
+    font-size: 18px;
+    padding-left:20px;
+}
+
+.para-2{
+    color: #0B0223;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+
+
+/* nav section ......... start*/
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 100px;
+    box-shadow: 0px 4px 30px 0px rgba(0, 0, 0, 0.05);
+
+}
+
+.left-side{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.left-side h3{
+    font-size: 45px;
+    font-weight: 700;
+}
+
+.right-side{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.right-side ul {
+    display: flex;
+    gap: 15px;  
+}
+
+ul li{
+    list-style: none;
+}
+
+li a{
+    font-size: 18px;
+    text-decoration: none;
+    color: #3C354F;
+}
+
+.follow-links{
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background-color: rgba(11, 2, 35, 0.10);
+    padding: 10px;
+    border-radius: 8px;
+}
+
+/* banner section ........ start */
+
+.banner{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 100px;
+
+    
+}
+.banner-left-side{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    gap: 30px;
+    background-image: url('images/Group\ 14.png');
+    background-size: 800px;
+    background-repeat: no-repeat;
+}
+
+
+.banner-left-side ul li{
+    display: flex; 
+    gap: 10px;
+    margin-top: 10px;
+    font-size: 20px;
+    color: var(--gray);
+}
+
+.title-top{
+    font-size: 48px;
+    font-weight: 700;
+}
+
+.title-bottom{
+    font-size: 95px;
+    background: linear-gradient(180deg, #F948B2 0%, #8758F1 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.btn-container{
+    margin-top: 20px;
+}
+
+.sign-btn{
+    background-color: var(--primary-color);
+    border: none;
+    padding: 21px 40px;
+    border-radius: 50px;
+    font-size: 20px;
+    font-weight: 600;
+    color: wheat;
+}
+
+.rouge-btn{
+    background-color: #4EC5F7;
+    border: none;
+    padding: 21px 40px;
+    border-radius: 50px;
+    font-size: 20px;
+    font-weight: 600;
+    color: white;
+    margin-left: 18px;
+}
+
+.banner-right-side img{
+    width: 600px;
+}
+
+/* information styles..................*/
+
+.info-container{
+    display: flex;
+    align-items: center;
+    padding: 0px 100px;
+    background: linear-gradient(90deg, rgba(255, 66, 165, 0.03) 0%, rgba(255, 66, 165, 0.03) 100%);
+    margin-top: 20px;
+}
+
+.info-img img{
+    width: 700px;
+}
+
+.info-top{
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+
+/* .info-top p{
+
+} */
+
+.info-top button{
+    background-color: var(--primary-color);
+    border: none;
+    padding: 21px 40px;
+    border-radius: 50px;
+    font-size: 20px;
+    font-weight: 600;
+    color: white;   
+}
+
+.info-moto{
+    text-align: right;
+    margin-top: 30px;
+}
+
+
+.info-moto p{
+    color: #3C354F;
+    font-size: 20px;
+}
+
+.info-moto h3{
+    color: var(--gray);
+}
+
+/* videos container styles ......... */
+
+.videos-page{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 0px 100px;
+    
+}
+
+.videos-page h3{
+    font-size: 48px;
+   
+}
+
+.videos-container{
+    display: flex;
+    gap: 30px;
+    width: 100%;
+    margin-top: 40px;
+}
+
+.video-card{
+   width: 25%;
+   text-align: left;
+}
+
+.video-card img {
+    width: 100%;
+}
+
+.video-card p{
+    margin-top: 10px;
+}
+
+/* features ...........*/
+
+.features-container{
+    display: flex;
+    padding: 0px 100px;
+    gap: 200px;
+    margin-top: 100px;
+}
+
+.features-container h3{
+    font-size: 48px;
+}
+
+.pos-img{
+    position: relative;
+    bottom: 250px;
+    right: 160px;
+}
+
+.features-info{
+    text-align: right;
+    margin-top: 100px;
+    /* padding: 20px; */
+}
+
+/* game-category-container  */
+
+.game-category-container{
+    padding: 0px 100px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+
+.game-btn{
+    display: flex;
+    align-items: center;
+    gap:30px;
+    padding: 10px;
+    border: none;
+    background-color: white;
+
+}
+
+.game-btn:hover{
+    border: 1px solid var(--primary-color);
+    border-radius: 50px;
+}
+
+
+
+
+@media  screen and (max-width:425px) {
+    nav , .banner, .right-side, .right-side ul{
+        flex-direction: column;
+        text-align: center;
+    }
+    .banner{
+        padding: 20px;
+    }
+    .banner-left-side{
+        background-size: 100% 100%;
+        text-align: center;
+
+    } 
+
+    .banner-right-side img{
+        width: 100%
+    }
+    .btn-container{
+        display: flex;
+    }
+
+    .banner-left-side ul{
+        text-align: center;
+    }
+
+    .info-container, .videos-page, .features-container {
+        flex-direction: column;
+        padding: 0px;
+    }
+
+    .info-top ,.info-moto{
+        text-align: center;
+    }
+
+    .info-img . img{
+        width: 100%;
+    }
+    .videos-container{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .video-card{
+        width: 80%;
+    }
+
+    
+}
