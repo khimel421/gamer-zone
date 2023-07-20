@@ -43,6 +43,10 @@
     font-weight: 600;
 }
 
+.text-center{
+    text-align: center;
+    justify-content: center;
+}
 
 
 /* nav section ......... start*/
@@ -100,22 +104,29 @@ li a{
 
 /* banner section ........ start */
 
-.banner{
+
+
+
+.container{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0px 100px;
-
-    
+    width: 80%;
+    margin: 0 auto;  
 }
+.banner-bg{
+    background-image: url('images/Group\ 14.png');
+    background-size: 800px;
+    background-repeat: no-repeat;
+}
+
+
+
 .banner-left-side{
     display: flex;
     width: 100%;
     flex-direction: column;
     gap: 30px;
-    background-image: url('images/Group\ 14.png');
-    background-size: 800px;
-    background-repeat: no-repeat;
 }
 
 
@@ -125,6 +136,7 @@ li a{
     margin-top: 10px;
     font-size: 20px;
     color: var(--gray);
+    text-align: left;
 }
 
 .title-top{
@@ -142,9 +154,13 @@ li a{
 
 .btn-container{
     margin-top: 20px;
+    display: flex;
+    gap: 10px;
 }
 
-.sign-btn{
+
+
+.banner-btn{
     background-color: var(--primary-color);
     border: none;
     padding: 21px 40px;
@@ -156,13 +172,6 @@ li a{
 
 .rouge-btn{
     background-color: #4EC5F7;
-    border: none;
-    padding: 21px 40px;
-    border-radius: 50px;
-    font-size: 20px;
-    font-weight: 600;
-    color: white;
-    margin-left: 18px;
 }
 
 .banner-right-side img{
@@ -172,11 +181,9 @@ li a{
 /* information styles..................*/
 
 .info-container{
-    display: flex;
-    align-items: center;
-    padding: 0px 100px;
     background: linear-gradient(90deg, rgba(255, 66, 165, 0.03) 0%, rgba(255, 66, 165, 0.03) 100%);
     margin-top: 20px;
+    display: flex;
 }
 
 .info-img img{
@@ -189,11 +196,6 @@ li a{
     flex-direction: column;
     gap: 30px;
 }
-
-
-/* .info-top p{
-
-} */
 
 .info-top button{
     background-color: var(--primary-color);
@@ -210,7 +212,6 @@ li a{
     margin-top: 30px;
 }
 
-
 .info-moto p{
     color: #3C354F;
     font-size: 20px;
@@ -224,11 +225,8 @@ li a{
 
 .videos-page{
     text-align: center;
-    display: flex;
     flex-direction: column;
-    gap: 10px;
-    padding: 0px 100px;
-    
+    gap: 10px;   
 }
 
 .videos-page h3{
@@ -246,6 +244,40 @@ li a{
 .video-card{
    width: 25%;
    text-align: left;
+   
+}
+
+.hover-bg{
+    position: relative;
+}
+
+.overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+    transition: opacity 0.4s ease-in-out;
+    background-color: black;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border: 6px solid var(--primary-color);
+}
+.play-btn{
+    color: white;
+}
+
+.play-btn p{
+    color: var(--primary-color);
+}
+
+.hover-bg:hover .overlay{
+    opacity: 0.8;
 }
 
 .video-card img {
@@ -256,39 +288,44 @@ li a{
     margin-top: 10px;
 }
 
+
+
 /* features ...........*/
 
 .features-container{
     display: flex;
-    padding: 0px 100px;
     gap: 200px;
     margin-top: 100px;
+    height: auto;
 }
 
 .features-container h3{
-    font-size: 48px;
+    font-size: 47px;
+}
+
+.features-img{
+    position: relative;
 }
 
 .pos-img{
-    position: relative;
-    bottom: 250px;
-    right: 160px;
+    position: absolute;
+    top: 70%;
+    left: -25%;
 }
 
 .features-info{
     text-align: right;
-    margin-top: 100px;
-    /* padding: 20px; */
 }
+
+
 
 /* game-category-container  */
 
 .game-category-container{
-    padding: 0px 100px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-
+    margin-top: 250px;
 }
 
 .game-btn{
@@ -306,32 +343,67 @@ li a{
     border-radius: 50px;
 }
 
+footer{
+    background-color: #0B0223;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    gap: 30px;
+    padding: 30px 0px;
+    margin-top: 60px;
+}
 
+.links{
+    color: white;
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+
+.resize-icon{
+    color: white;
+}
+
+.social-media-icons{
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+
+.privacy-links{
+    color: white;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.copy-right{
+    color: white;
+    margin-top: 30px;
+}
 
 
 @media  screen and (max-width:425px) {
-    nav , .banner, .right-side, .right-side ul{
+    nav , .banner, .right-side, .container, .right-side ul{
         flex-direction: column;
         text-align: center;
     }
-    .banner{
-        padding: 20px;
-    }
-    .banner-left-side{
-        background-size: 100% 100%;
-        text-align: center;
 
+    
+
+    .banner-left-side{
+        text-align: center;
     } 
 
     .banner-right-side img{
         width: 100%
-    }
-    .btn-container{
-        display: flex;
-    }
-
-    .banner-left-side ul{
-        text-align: center;
     }
 
     .info-container, .videos-page, .features-container {
@@ -339,13 +411,16 @@ li a{
         padding: 0px;
     }
 
-    .info-top ,.info-moto{
+    .info-top ,.info-moto, .features-info{
         text-align: center;
     }
 
-    .info-img . img{
+    .info-img img{
         width: 100%;
     }
+
+
+
     .videos-container{
         flex-direction: column;
         justify-content: center;
@@ -354,7 +429,50 @@ li a{
 
     .video-card{
         width: 80%;
+
     }
 
-    
+    .features-container{
+        gap: 100px;
+    }
+
+    .resize-img{
+        width: 80%;
+        margin-left: 66px;
+    }
+
+    .pos-img{
+        top: 60%;
+        left: 3%;
+    }
+
+    .pos-img img{
+        width: 43%;
+    }
+
+        .features-container{
+        gap: 100px;
+    }
+
+    .resize-img{
+        width: 80%;
+        margin-left: 66px;
+    }
+
+    .pos-img{
+        top: 60%;
+        left: -25%;
+    }
+
+    .pos-img img{
+        width: 43%;
+    }
+    .game-category-container {
+        margin-top: 120px;
+    }
+
+    .videos-page{
+        margin-top: 100px;
+    }
+  
 }
